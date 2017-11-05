@@ -5,15 +5,21 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("podaj imię");
         Scanner scanner = new Scanner(System.in);
-       String name = scanner.nextLine();
+        System.out.println("podaj imię");
+        String name = scanner.nextLine();
 
-       if(name.endsWith("a")){
-           System.out.println(name +" jest kobietą");
-       }else{
-           System.out.println(name+" jest mężczyzną");
-       }
+        while (!name.isEmpty()) {
 
+            if (name.endsWith("a")) {
+                System.out.println(name + " jest kobietą");
+            } else {
+                System.out.println(name + " jest mężczyzną");
+            }
+            System.out.println("podaj imię");
+            name = scanner.nextLine();
+        }
     }
 }
+
+
